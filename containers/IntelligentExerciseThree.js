@@ -1,24 +1,25 @@
 import { connect } from 'react-redux';
-import ExerciseZero from '../components/ExerciseZero';
+import ExerciseThree from '../components/ExerciseThree';
 import * as actions from '../actions';
 
 const mapStateToProps = (state) => {
     return {
-        value: state.exercise3.value,
+        selectedValue: state.exercise3.value,
+        allValues: state.exercise3.allValues,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changeValue: (event) => {
+        submittedValue: (event) => {
             dispatch(actions.submittedValue(event));
         },
     };
 };
 
-const IntelligentExerciseZero = connect(
+const IntelligentExerciseThree = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(ExerciseZero);
+)(ExerciseThree);
 
-export default IntelligentExerciseZero;
+export default IntelligentExerciseThree;

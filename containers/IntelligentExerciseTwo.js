@@ -4,7 +4,7 @@ import * as actions from '../actions';
 
 const mapStateToProps = (state) => {
     return {
-        hasTickedBox: state.exercise2.hasTickedBox,
+        hasTickedBox: state.exercise2.checked,
     };
 };
 
